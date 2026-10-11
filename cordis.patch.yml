@@ -1,0 +1,7 @@
+# dsh-ui-usage-stats: 跨会话用量统计面板（持久化组合条目）。
+- insert:
+    - id: usage-stats
+      name: dsh-ui-usage-stats
+      inject:
+        - webServer
+        - connection

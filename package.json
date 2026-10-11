@@ -1,0 +1,54 @@
+{
+  "name": "dsh-ui-usage-stats",
+  "version": "0.1.0",
+  "description": "Cross-session usage statistics dashboard for the DSH web client: token totals, activity heatmap, per-model daily trends, and a model usage donut, aggregated from durable session logs.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "engines": {
+    "dsh": ">=0.2.0-rc.2"
+  },
+  "homepage": "https://github.com/yuexusi/dsh-ui-usage-stats#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuexusi/dsh-ui-usage-stats.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "usage",
+    "statistics",
+    "dashboard"
+  ],
+  "license": "MIT"
+}
