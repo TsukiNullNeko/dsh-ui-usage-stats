@@ -1,6 +1,6 @@
 {
   "name": "dsh-ui-usage-stats",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cross-session usage statistics dashboard for the DSH web client: token totals, activity heatmap, per-model daily trends, and a model usage donut, aggregated from durable session logs.",
   "type": "module",
   "main": "./lib/index.js",
